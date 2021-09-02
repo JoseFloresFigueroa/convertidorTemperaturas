@@ -18,6 +18,7 @@
 		726AC41326CB3B2000B67F68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 726AC41126CB3B2000B67F68 /* LaunchScreen.storyboard */; };
 		726AC41E26CB3B2000B67F68 /* ConvertidorTemperaturaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726AC41D26CB3B2000B67F68 /* ConvertidorTemperaturaTests.swift */; };
 		726AC42926CB3B2000B67F68 /* ConvertidorTemperaturaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726AC42826CB3B2000B67F68 /* ConvertidorTemperaturaUITests.swift */; };
+		AA3C93FA26DDAFC90000CBA4 /* TemperatureConverterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3C93F926DDAFC90000CBA4 /* TemperatureConverterService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		726AC42426CB3B2000B67F68 /* ConvertidorTemperaturaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConvertidorTemperaturaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		726AC42826CB3B2000B67F68 /* ConvertidorTemperaturaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertidorTemperaturaUITests.swift; sourceTree = "<group>"; };
 		726AC42A26CB3B2000B67F68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA3C93F926DDAFC90000CBA4 /* TemperatureConverterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureConverterService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 		725F758926CDDF5E006AF1A1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AA3C93F826DDAFA00000CBA4 /* Services */,
 				725F759326CDE23D006AF1A1 /* Tools */,
 				725F758A26CDDF7E006AF1A1 /* ValueObject */,
 			);
@@ -159,6 +162,14 @@
 				726AC42A26CB3B2000B67F68 /* Info.plist */,
 			);
 			path = ConvertidorTemperaturaUITests;
+			sourceTree = "<group>";
+		};
+		AA3C93F826DDAFA00000CBA4 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				AA3C93F926DDAFC90000CBA4 /* TemperatureConverterService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,6 +307,7 @@
 				726AC40726CB3B1E00B67F68 /* AppDelegate.swift in Sources */,
 				725F758C26CDDFCB006AF1A1 /* Temperature.swift in Sources */,
 				726AC40926CB3B1E00B67F68 /* SceneDelegate.swift in Sources */,
+				AA3C93FA26DDAFC90000CBA4 /* TemperatureConverterService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
