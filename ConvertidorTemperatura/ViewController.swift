@@ -22,8 +22,8 @@ class ViewController: UIViewController {
     @IBAction func convertToFarenheit(_ sender: UIButton) {
         fahrenheitTextField.text = ""
                 
-                if let celsiusValue = celsiusTextField.text {
-                    if !celsiusValue.isEmpty {
+        if let celsiusValue = celsiusTextField.text {
+            if !celsiusValue.isEmpty {
                         /*let fahrenheitValue = temperatureConverter.convert(temperature: Temperature(value: Float16(celciusValue)!, unit: Temperature.Unit.CELSIUS), unitToConvert: Temperature.Unit.FAHRENHEIT)
                         print("Farenheit " + String(fahrenheitValue.value))
                         fahrenheitTextField.text = String(fahrenheitValue.value)*/
@@ -39,10 +39,20 @@ class ViewController: UIViewController {
                     } else {
                         print("Celcius value is empty")
                     }
-                }
-
-        
+        }
     }
     
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showHistory" {
+            let controller = (segue.destination as! ListViewController)
+                
+            temperatureConverterService.retrieveHistory() {
+                (history) in
+                DispatchQueue.main.async {
+                    controller.history = history
+                    controller.tableView.reloadData()
+                }
+            }
+        }
+    }
 }
